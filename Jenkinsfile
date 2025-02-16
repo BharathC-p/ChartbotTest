@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        APP_SERVER_IP = 'your_application_server'
+        APP_SERVER_IP = '35.154.48.37'
         APP_SERVER_USER = 'ubuntu'
-        SSH_KEY = credentials('ssh-key')  // Use the ID from Jenkins Credentials
+        SSH_KEY = "/var/lib/jenkins/app.pem"  // Use the ID from Jenkins Credentials
     }
 
     stages {
