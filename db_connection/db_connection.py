@@ -3,10 +3,10 @@ import os
 
 # Database Configuration (Modify as needed)
 DB_CONFIG = {
-    "dbname": "your_db",
-    "user": "your_user",
-    "password": "your_password",
-    "host": "your_host",
+    "dbname": "database-1.c9scia20gbq0.ap-south-1.rds.amazonaws.com",
+    "user": "postgres",
+    "password": "Allvy1234",
+    "host": "postgres",
     "port": "5432"
 }
 
