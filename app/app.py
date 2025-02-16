@@ -1,12 +1,17 @@
-from flask import Flask, request, jsonify
-from query_generator import generate_sql_query
-from db_connection import execute_query
+from flask import Flask, request, jsonify, render_template
+from query.translator import generate_sql_query
+from db_connection.db_connection import execute_query
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../templates")
+
+@app.route("/")
+def home():
+    """Serve the HTML page"""
+    return render_template("index.html")
 
 @app.route("/query", methods=["POST"])
 def query_db():
-    """Handle incoming natural language queries"""
+    """Handle natural language queries"""
     try:
         data = request.json
         user_query = data.get("query")
